@@ -25,9 +25,27 @@
 
 ## 📖 Descrição / Description
 
-**PT:** Projeto desenvolvido como exercício da Ultima.School. O objetivo é criar um sistema completo de gestão de agendamentos para um Petshop, com autenticação, painel administrativo e interatividade via Flask + JavaScript. Inclui fluxo de login, cadastro e listagem de reservas, atualização de status e reset de banco via script e CLI.  
+**PT:**
+- Projeto desenvolvido como atividade de Projeto da **Ultima.School**  
+- Objetivo: criar um sistema completo de **gestão de agendamentos para um Petshop**  
+- Principais recursos:
+  - 🔐 Autenticação de administrador  
+  - 🛠️ Painel administrativo  
+  - ⚡ Interatividade via **Flask + JavaScript**  
+  - 📅 Fluxo de login, cadastro e listagem de reservas  
+  - 🔄 Atualização de status das reservas  
+  - 🗑️ Reset do banco de dados via **script** ou **CLI**  
 
-**EN:** Project developed as an Ultima.School exercise. The goal is to build a complete Petshop scheduling management system, with authentication, admin panel, and interactivity using Flask + JavaScript. It includes admin login, reservation creation and listing, status updates, and database reset via script and CLI.
+**EN:**
+- Project developed as an **Ultima.School** Project activity  
+- Goal: build a complete **Petshop scheduling management system**  
+- Main features:
+  - 🔐 Admin authentication  
+  - 🛠️ Admin panel  
+  - ⚡ Interactivity using **Flask + JavaScript**  
+  - 📅 Admin login, reservation creation and listing  
+  - 🔄 Reservation status updates  
+  - 🗑️ Database reset via **script** or **CLI**  
 
 ---
 
