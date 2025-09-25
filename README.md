@@ -134,7 +134,6 @@ Access in browser: URL: http://127.0.0.1:5000/login User: admin Pass: admin
 | Tecnologia | Ícone |
 |------------|-------|
 | **Python** | <img alt="Python" title="Python" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> |
-| **Flask** | <img alt="Flask" title="Flask" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"/> |
 | **SQLite** | <img alt="SQLite" title="SQLite" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"/> |
 | **Bootstrap** | <img alt="Bootstrap" title="Bootstrap" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"/> |
 | **JavaScript** | <img alt="JavaScript" title="JavaScript" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/> |
