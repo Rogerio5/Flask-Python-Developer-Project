@@ -138,6 +138,8 @@ Access in browser: URL: http://127.0.0.1:5000/login User: admin Pass: admin
 | **SQLite** | <img alt="SQLite" title="SQLite" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"/> |
 | **Bootstrap** | <img alt="Bootstrap" title="Bootstrap" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"/> |
 | **JavaScript** | <img alt="JavaScript" title="JavaScript" width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/> |
+| **Flask** | ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) |
+
 
 ---
 
