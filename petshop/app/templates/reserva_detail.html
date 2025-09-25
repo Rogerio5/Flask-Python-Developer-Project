@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Detalhes da Reserva</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ reserva.nome_pet }}</h5>
+            <p><strong>Cliente:</strong> {{ reserva.nome_cliente }}</p>
+            <p><strong>Telefone:</strong> {{ reserva.telefone }}</p>
+            <p><strong>Categoria:</strong> {{ reserva.categoria }}</p>
+            <p><strong>Data da Reserva:</strong> {{ reserva.dia_reserva }}</p>
+            <p><strong>Observações:</strong> {{ reserva.observacoes }}</p>
+            <p><strong>Status:</strong> 
+                <span class="badge bg-info">{{ reserva.status }}</span>
+            </p>
+        </div>
+        <div class="card-footer">
+            <a href="{{ url_for('reserva_edit', id=reserva.id) }}" class="btn btn-warning">Editar</a>
+            <a href="{{ url_for('reserva_cancel', id=reserva.id) }}" class="btn btn-danger">Cancelar</a>
+            <a href="{{ url_for('reservas') }}" class="btn btn-secondary">Voltar</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

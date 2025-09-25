@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Editar Reserva</h2>
+
+    <form method="post">
+        {{ form.hidden_tag() }}
+        
+        <div class="mb-3">
+            {{ form.nome_cliente.label(class="form-label") }}
+            {{ form.nome_cliente(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.telefone.label(class="form-label") }}
+            {{ form.telefone(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.nome_pet.label(class="form-label") }}
+            {{ form.nome_pet(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.categoria.label(class="form-label") }}
+            {{ form.categoria(class="form-select") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.dia_reserva.label(class="form-label") }}
+            {{ form.dia_reserva(class="form-control", type="date") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.observacoes.label(class="form-label") }}
+            {{ form.observacoes(class="form-control", rows="4") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.status.label(class="form-label") }}
+            {{ form.status(class="form-select") }}
+        </div>
+
+        <button type="submit" class="btn btn-success">Salvar Alterações</button>
+        <a href="{{ url_for('reservas') }}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+"""Tabela que lista reservas do dia selecionado."""
+
+{% extends "base.html" %}
+{% block title %}Reservas{% endblock %}
+
+{% block content %}
+<h2>Reservas do Dia</h2>
+<form id="form-data" class="mb-3">
+  <div class="input-group">
+    <input type="date" id="data" class="form-control" required>
+    <button class="btn btn-primary" type="submit">Buscar</button>
+  </div>
+</form>
+
+<table class="table table-striped" id="tabela-reservas">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Data</th>
+      <th>Pet</th>
+      <th>Cliente</th>
+      <th>Telefone</th>
+      <th>Categoria</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById("form-data").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const dia = document.getElementById("data").value;
+  const resp = await fetch(`/api/bookings?date=${dia}`);
+  const reservas = await resp.json();
+
+  const tbody = document.querySelector("#tabela-reservas tbody");
+  tbody.innerHTML = "";
+  reservas.forEach(r => {
+    tbody.innerHTML += `
+      <tr>
+        <td>${r.id}</td>
+        <td>${r.date}</td>
+        <td>${r.pet_name}</td>
+        <td>${r.customer.name}</td>
+        <td>${r.customer.phone}</td>
+        <td>${r.category}</td>
+        <td>${r.status}</td>
+      </tr>
+    `;
+  });
+});
+</script>
+{% endblock %}

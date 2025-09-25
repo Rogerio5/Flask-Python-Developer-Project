@@ -1,0 +1,52 @@
+/* ============================
+   🔐 Login Page
+   ============================ */
+body.login-page {
+  display: flex;
+  flex-direction: row; /* lado a lado no desktop */
+  height: 100vh;
+  margin: 0;
+}
+
+body.login-page .login-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light);
+}
+
+body.login-page .images-container {
+  flex: 2;
+  display: flex;
+}
+
+body.login-page .images-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cobre todo o espaço */
+}
+
+/* ============================
+   📱 Responsividade extra
+   ============================ */
+@media (max-width: 768px) {
+  body.login-page {
+    flex-direction: column; /* empilha só no mobile */
+  }
+  body.login-page .login-container {
+    width: 100%;
+    padding: 1rem;
+  }
+  body.login-page .images-container {
+    width: 100%;
+    height: 200px;
+    order: 2; /* aparece abaixo do login */
+  }
+  body.login-page .images-container img {
+    object-fit: cover;
+  }
+  body.login-page .card {
+    width: 100%;
+  }
+}

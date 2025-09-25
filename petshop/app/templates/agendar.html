@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Agendar Banho{% endblock %}
+
+{% block content %}
+<h2>Agendar Banho</h2>
+<form id="form-agendamento" class="card p-3 shadow-sm">
+  <div class="mb-3">
+    <label class="form-label">Nome do Cliente</label>
+    <input type="text" class="form-control" id="nome_dono" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Telefone</label>
+    <input type="text" class="form-control" id="telefone" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Nome do Pet</label>
+    <input type="text" class="form-control" id="nome_pet" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Categoria</label>
+    <select class="form-select" id="categoria_id" required>
+      {% for c in categorias %}
+        <option value="{{ c.id }}">{{ c.nome }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Data</label>
+    <input type="date" class="form-control" id="data" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Agendar</button>
+</form>
+
+<div id="mensagem" class="mt-3"></div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById("form-agendamento").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const payload = {
+    data: document.getElementById("data").value,
+    categoria_id: parseInt(document.getElementById("categoria_id").value),
+    nome_dono: document.getElementById("nome_dono").value,
+    telefone: document.getElementById("telefone").value,
+    nome_pet: document.getElementById("nome_pet").value
+  };
+
+  const resp = await fetch("/api/reservas", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(payload)
+  });
+
+  const data = await resp.json();
+  const msg = document.getElementById("mensagem");
+  if (resp.ok) {
+    msg.innerHTML = `<div class="alert alert-success">Reserva criada com sucesso! ID: ${data.id}</div>`;
+    e.target.reset();
+  } else {
+    msg.innerHTML = `<div class="alert alert-danger">Erro: ${data.message || "Falha ao criar reserva"}</div>`;
+  }
+});
+</script>
+{% endblock %}
