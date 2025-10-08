@@ -1,18 +1,21 @@
-# Dependências principais do Django
+# Framework principal
 Django==4.2.25
+
+# Django REST Framework
 djangorestframework==3.16.1
-django-filter==25.1
-Pillow==11.3.0
+
+# Filtros para DRF
 django-filter==25.1
 
 # Utilitários
+Pillow==11.3.0
 asgiref==3.10.0
 sqlparse==0.5.3
 tzdata==2025.2
 python-decouple==3.10
 
 # Produção (Render/Heroku style)
-gunicorn
+gunicorn==21.2.0
 whitenoise==6.5.0
 psycopg2-binary
 dj-database-url
